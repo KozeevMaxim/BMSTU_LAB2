@@ -33,7 +33,11 @@ double sqrt(float a) {
     return x;
 }
 int main() {
-    float a=9, b=6;
+    float a, b;
+    cout << "a=";
+    cin >> a;
+    cout << "b=";
+    cin >> b;
     cout << "a+b=" << sum(a, b) << endl;
     cout << "a/b=" << dev(a, b) << endl;
     cout << "a*b=" << mult(a, b) << endl;
