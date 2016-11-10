@@ -14,41 +14,25 @@ double mult(float a, float b) {
 double sub(float a, float b) {
     return a-b;
 }
-double pow (float a) {
-	unsigned int extent = 4;
-	float a2 = a;
-	
-	if (extent != 0) 
+double pow(float a, float b) {
+	double res = 1;
+	for (; b > 0; b--)
 	{
-			for (int i = 1; i < extent; i++)
-		{
-			a = a * a2;
-		}
+		res = res * a;
 	}
-		else a = 1.0;
-	
-	return (double) a;
+	return res;
 }
-double sq (float a) {
-	float xn = 1.0;  
-	float xn1 = 2.0;
-
-	if (a != 1 && a != 0)
+double sqrt(float a)
+{
+	double c = 0, res;
+	res = a;
+	while (c - res > 0.00001 || c - res < -0.00001)
 	{
-		while ((xn1 - xn) > 0.000001 || (xn1 - xn) < -0.000001 )
-		{
-		 xn = xn1;
-		 xn1 = (float)(xn + (float)a/xn)/2;
-		}
-
+		c = res;
+		res = (c + a / res) / 2;
 	}
-		else if (a == 1) xn1 = 1;
-			else if (a == 0) xn1 = 0;
-
-
-	return xn1;
+	return res;
 }
-
 int main() {
     float a, b;
     cout << "a=";
