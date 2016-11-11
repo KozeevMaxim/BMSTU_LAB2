@@ -34,11 +34,8 @@ double sqrt(float a)
 	return res;
 }
 int main() {
-    float a, b;
-    cout << "a=";
-    cin >> a;
-    cout << "b=";
-    cin >> b;
+    float a = 9
+    float b = 3
     cout << "a+b=" << sum(a, b) << endl;
     cout << "a/b=" << dev(a, b) << endl;
     cout << "a*b=" << mult(a, b) << endl;
